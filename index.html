@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="model" src="./InteriorTest.glb"></a-asset-item>
+        </a-assets>
+        <a-entity environment="preset: forest;skyType:atmosphere;shadow:true"></a-entity>
+        <a-entity gltf-model="./InteriorTest.glb" position="0 0.033 0"></a-entity>
+        <a-entity nav-mesh gltf-model="./nav.glb" position="0 0.033 0" scale="0.9 0.9 0.9" visible="false"></a-entity>
+        <a-entity gltf-model="./grass.glb" position="0 0 0"></a-entity>
+
+        <a-entity movement-controls='constrainToNavMesh:True'>
+        <a-entity position='0 1.3 0' camera look-controls></a-entity>
+        </a-entity>
+    </a-scene>
+  </body>
+</html>
