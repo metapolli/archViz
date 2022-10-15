@@ -4,7 +4,7 @@ import {GLTFLoader} from "./three/examples/jsm/loaders/GLTFLoader.js";
 
 let loader = new GLTFLoader()
 loader.load(
-    "../models/InteriorTest.glb",
+    "../archViz/models/InteriorTest.glb",
     (gltf)=>{
         var scene = document.querySelector('a-scene').object3D;
         var model = gltf.scene;
